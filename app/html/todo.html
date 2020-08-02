@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="ToDoListOnLoad()">
+    <link rel="stylesheet" href="/css/style.css">
+    <h1> やることリスト表示ページ </h1>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <li>
+        <div>タイトル</div>
+        <select name="title" id="title" onchange="titleChange()"></select>
+        <li>
+        <div>タイトル追加：</div>
+        <input type="text" class="newTitle" size="20" maxlength="20" id="newTitle" value="">
+        <button id="addTitle" onclick="AddToDoTitle()">追加</button>
+        <button id="editTitle" onclick="location.href='todo-title.html'">編集画面へ</button>
+        </li>
+    </li>
+
+    <span>未完了のみ表示：</span>
+    <td><input type="checkbox" class="incomplete" id="incomplete" onchange="titleChange()"></td>
+    
+    <hr class="clear">
+    
+    <div id="todo_list">タイトルをプルダウンから選択してください</div>
+    
+    <hr>
+
+    <input type="button" value="←戻る" onclick="location.href='index.html'">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="/js/todo_list.js"></script>
+</body>
+
+</html>

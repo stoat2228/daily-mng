@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="RegisterOnLoad();">
+    <link rel="stylesheet" href="/css/style.css">
+    <h1> 登録画面 </h1>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <li>
+        <div>登録対象日</div>
+        <input type="date" id="targetDate">
+        <button id="redisplay">表示</button>
+    </li>
+    <li>
+        <form name="fym">
+            <table>
+                <tr>
+                    <th>
+                        <select name="syear" onChange="change_cal()"></select>年
+                        <select name="smon" onChange="change_cal()"></select>月
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="button" value="≪" onClick="change_month(-12)">
+                        <input type="button" value="←" onClick="change_month(-1)">
+                        <input type="button" value="今月" onClick="change_form(year,mon)">
+                        <input type="button" value="→" onClick="change_month(1)">
+                        <input type="button" value="≫" onClick="change_month(12)">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div id="calendar"></div>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </li>
+
+    <hr class = "clear">
+    <div id = achievementList></div>
+    <hr class = "clear">
+    <input type="button" value="←戻る" onclick="location.href='index.html'">
+    <input type="button" value="内容表示" id="textoutput">
+    <input type="button" value="登録" id="textregistration">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/text_output.js"></script>
+</body>
+
+</html>

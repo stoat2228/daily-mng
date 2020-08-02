@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="ToDoTitleOnLoad()">
+    <link rel="stylesheet" href="/css/style.css">
+    <h1> やることリスト_タイトル編集ページ </h1>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+    <span>有効のみ表示：</span>
+    <td><input type="checkbox" class="enable" id="enable" onchange="ToDoTitleOnLoad()"></td>
+    
+    <hr class="clear">
+    
+    <div id="todo_title"></div>
+    
+    <hr>
+
+    <input type="button" value="←戻る" onclick="location.href='todo.html'">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="/js/todo_title.js"></script>
+</body>
+
+</html>
